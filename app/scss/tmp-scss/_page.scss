@@ -1,0 +1,255 @@
+.page {
+  position: relative;
+  padding: 93px 70px 48px 80px;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include adpt (599) {
+    padding: 55px 20px 30px 40px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url('../images/img.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 298px;
+    height: 222px;
+    top: 17px;
+    right: 5px;
+    z-index: -1;
+
+    @include adpt (599) {
+      width: 150px;
+      height: 200px;
+    }
+  }
+
+  &__logo {
+    max-width: 190px;
+    width: 100%;
+    margin-bottom: 26px;
+
+    @include adpt (599) {
+      max-width: 160px;
+    }
+  }
+
+  &__logo-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__title {
+    position: relative;
+    font-size: 40px;
+    line-height: 1.07;
+    color: $accent;
+    margin-bottom: 25px;
+
+    @include adpt (599) {
+      font-size: 27px;
+      margin-bottom: 15px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 55px;
+      height: 268px;
+      background-image: url('../images/arrow2.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: -48px;
+      bottom: 10px;
+      transform: translateY(100%);
+      width: 35px;
+      right: -40px;
+
+      @include adpt (599) {
+        display: none;
+      }
+    }
+  }
+
+  &__quest {
+    position: relative;
+    font-size: 19px;
+    padding-left: 41px;
+    margin-bottom: 20px;
+
+    @include adpt (599) {
+      font-size: 14px;
+      padding-left: 30px;
+      margin-bottom: 15px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url('../images/quest.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 53px;
+      height: 85px;
+
+      @include adpt (599) {
+        width: 28px;
+        left: -5px;
+        height: 50px;
+      }
+    }
+
+  }
+
+  &__text {
+    position: relative;
+    margin-bottom: 40px;
+
+    @include adpt (599) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 64px;
+      height: 292px;
+      left: -65px;
+      transform: translateY(-100%);
+      top: 0;
+      background-image: url('../images/arrow.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include adpt (599) {
+        display: none;
+      }
+    }
+  }
+
+  &__why {
+    position: relative;
+    display: flex;
+    margin-bottom: 15px;
+
+    & p {
+      position: relative;
+      color: $accent;
+      font-size: 17px;
+      padding-left: 159px;
+
+      @include adpt (599) {
+        font-size: 14px;
+        padding-left: 140px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 56px;
+        height: 96px;
+        background-image: url('../images/brackets.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 95px;
+        top: -22px;
+        z-index: -1;
+
+        @include adpt (599) {
+          width: 36px;
+          height: 60px;
+          top: -10px;
+          left: 98px;
+        }
+      }
+    }
+
+  }
+
+  &__why-img {
+    position: absolute;
+    left: -55px;
+    top: 0;
+    max-width: 200px;
+    height: auto;
+    z-index: -1;
+
+    @include adpt (599) {
+      max-width: 150px;
+      left: -20px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 18px;
+  }
+
+  &__item {
+    &:first-child {
+      font-size: 17px;
+      color: $accent;
+      margin-bottom: 6px;
+
+      @include adpt (599) {
+        font-size: 16px;
+      }
+    }
+
+    &:not(:first-child) {
+      position: relative;
+      padding-left: 17px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        width: 9px;
+        height: 14px;
+        background-image: url('../images/Frame1.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 0;
+      }
+    }
+  }
+
+  &__bottom-text {
+    font-size: 14px;
+    margin-bottom: 23px;
+    padding-right: 5px;
+  }
+
+  &__bottom-text-2 {
+    font-size: 16px;
+    margin-bottom: 36px;
+
+    @include adpt (599) {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__social-item {
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include adpt (599) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
